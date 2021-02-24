@@ -23,6 +23,7 @@ services:
       - POSTGRES_PASSWORD=chatroom
   redis:
     image: redis:latest
+    command: ["redis-server", "--bind", "redis", "--port", "6379"]
 
 volumes:
   postgres_data:
